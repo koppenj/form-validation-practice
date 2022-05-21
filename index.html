@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type= "text/css" href="output.css" />
+    <title>Your Papers, Please</title>
+  </head>
+  <body>
+    <div class="rendered-form">
+      <h2>Registration Form</h2>
+      <hr id="two" data-symbol="✈">
+      <form>
+        <div id="emailInput">
+          <label for="email"
+            >Email<span class="formbuilder-required">*</span
+            ><span class="tooltip-element" data-tooltip="Email Address Required" data-tooltip-position="right"
+              >?</span
+            ></label
+          >
+          <input
+            type="email"
+            placeholder="Example@email.com"
+            class="form-control"
+            name="text-1653024240727"
+            access="false"
+            id="text-1653024240727"
+            title="Email Address Required"
+            required="required"
+            aria-required="true"
+          />
+        </div>
+        <div id="countryInput">
+          <label for="select-country" class="formbuilder-select-label"
+            >Country<span class="formbuilder-required">*</span
+            ><span class="tooltip-element" data-tooltip="Where Do You Live?" data-tooltip-position="right"
+              >?</span
+            ></label
+          >
+          <select
+            class="form-control"
+            name="select-country"
+            id="select-country"
+            required="required"
+            aria-required="true"
+          >
+            <option value="option-1" selected="true" id="select-country-0">
+              United States
+            </option>
+            <option value="option-2" id="select-country-1">Canada</option>
+            <option value="option-3" id="select-country-2">Mexico</option>
+            <option value="option-4" id="select-country-3">Ireland</option>
+            <option value="option-5" id="select-country-4">India</option>
+            <option value="option-6" id="select-country-5">Pakistan</option>
+            <option value="option-6" id="select-country-6">Jamaica</option>
+          </select>
+        </div>
+        <div id="zipcode">
+          <label for="zipcode">
+            Zipcode<span class="formbuilder-required">*</span>
+            <span class="tooltip-element"
+            data-tooltip="Postal Zip Code"
+            data-tooltip-position="right"
+            >?</span>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            name="zipcode"
+            access="false"
+            maxlength="5"
+            minlength="5"
+            id="zipcode"
+            title="5 Digit Zip Code"
+            required="required"
+            aria-required="true"
+          />
+        </div>
+        <div id="passwordInput">
+          <label for="text-1653024840648"
+            >Password<span class="formbuilder-required">*</span
+            ><span
+              class="tooltip-element"
+              data-tooltip="Must Contain Upper (A-Z) &amp; Lower (a-z) Case Letters &amp; At Least One Number (0-9) "
+              data-tooltip-position="right"
+              >?</span
+            ></label
+          >
+          <input
+            type="password"
+            class="form-control"
+            name="text-1653024840648"
+            access="false"
+            maxlength="20"
+            id="text-1653024840648"
+            title="Must Contain Upper (A-Z) &amp; Lower (a-z) Case Letters &amp; At Least One Number (0-9) "
+            required="required"
+            aria-required="true"
+          />
+        </div>
+        <div id="confirmPassword">
+          <label for="confirmPassword"
+            >Confirm Password<span class="formbuilder-required">*</span
+            ><span class="tooltip-element" data-tooltip="Must Match First Input"
+            data-tooltip-position="right"
+              >?</span
+            ></label
+          >
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            access="false"
+            maxlength="20"
+            id="password"
+            title="Must Match First Input"
+            required="required"
+            aria-required="true"
+          />
+        </div>
+        <div id="buttonZone">
+          <button
+            type="submit"
+            name="submit-btn"
+            access="false"
+            id="submit-btn"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            name="cancel-btn"
+            access="false"
+            id="cancel-btn"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

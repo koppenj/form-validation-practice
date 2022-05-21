@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css?family=Megrim);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  color: #333;
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-top: 1rem;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+hr#two:before {
+  left: 90%;
+  width: 20%;
+  padding: 1em;
+  top: 1px;
+}
+
+.rendered-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(90, 92, 92, 0.1);
+  min-width: max-content;
+  padding: 15px;
+  border-radius: 20px;
+  border-style: groove;
+  margin-top: 2rem;
+  border-bottom: #333 1px solid;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+}
+
+.formControl select option {
+  margin: 40px;
+  background: rgba(182, 24, 24, 0.3);
+  color: #fff;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+  border-bottom: #333 1px dotted;
+}
+
+div#countryInput {
+  display: inherit;
+  justify-content: left;
+}
+
+div#buttonZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  width: max-content;
+}
+
+div#buttonZone * {
+  border-radius: 5px;
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+div#buttonZone *:hover {
+  transform: scale(1.1) translate3d(8px, 2px, 5px);
+}
+
+button#submit-btn {
+  background-color: rgba(0, 255, 21, 0.67);
+}
+
+button#cancel-btn {
+  background-color: rgba(255, 30, 0, 0.67);
+}
+
+form div label {
+  font-size: 0.75rem;
+}
+
+input:invalid {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 30, 0, 0.67);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(255, 30, 0, 0.67);
+  box-shadow: 0px 0px 30px 0px rgba(255, 30, 0, 0.67);
+}
+
+input:valid {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 21, 0.67);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 255, 21, 0.67);
+  box-shadow: 0px 0px 30px 0px rgba(0, 255, 21, 0.67);
+}
+
+/* Handling Tool Tip viewing */
+[data-tooltip] {
+  display: inline-block;
+  position: relative;
+  padding: 4px;
+}
+
+/* Tooltip styling */
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Dynamic vertical centering */
+[data-tooltip-position=right]:before {
+  top: 50%;
+  left: 100%;
+  margin-left: 6px;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Tooltip arrow styling/placement */
+[data-tooltip]:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* Dynamic vertical centering for the tooltip */
+[data-tooltip-position=right]:after {
+  top: 50%;
+  margin-top: -6px;
+  left: 100%;
+  border-width: 6px 6px 6px 0;
+  border-right-color: #000;
+}
+
+/* Show the tooltip when hovering */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  display: block;
+  z-index: 50;
+}
+
+/*# sourceMappingURL=output.css.map */
