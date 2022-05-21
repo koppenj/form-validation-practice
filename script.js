@@ -11,6 +11,7 @@ submit.addEventListener('click', (event) => {
   const retrievedData = [];
   formData.forEach((data) => {
     retrievedData.push(data.value);
+    // eslint-disable-next-line no-console
     console.table(retrievedData);
   });
   // if not:
