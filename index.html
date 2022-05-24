@@ -11,27 +11,23 @@
     <div class="rendered-form">
       <h2>Registration Form</h2>
       <hr id="two" data-symbol="✈" />
-      <form>
-        <div id="emailInput">
+      <form id="form">
+        <div id="emailDiv">
           <label for="email"
             >Email<span class="formbuilder-required">*</span
             ><span
               class="tooltip-element"
-              data-tooltip="Email Address Required"
+              data-tooltip="Example@gmail.com"
               data-tooltip-position="right"
               >?</span
             ></label
           >
           <input
             type="email"
-            placeholder="Example@email.com"
             class="form-control"
-            name="text-1653024240727"
-            access="false"
-            id="text-1653024240727"
-            title="Email Address Required"
+            title="Email Address"
+            id="email"
             required="required"
-            aria-required="true"
           />
         </div>
         <div id="countryInput">
@@ -48,10 +44,12 @@
             class="form-control"
             name="select-country"
             id="select-country"
-            required="required"
+            title="Select Country"
             aria-required="true"
+            required="required"
           >
-            <option value="option-1" selected="true" id="select-country-0">
+          <option value="none" selected="selected" disabled>Select an Option</option>
+            <option value="option-1" id="select-country-0">
               United States
             </option>
             <option value="option-2" id="select-country-1">Canada</option>
@@ -67,7 +65,7 @@
             Zipcode<span class="formbuilder-required">*</span>
             <span
               class="tooltip-element"
-              data-tooltip="Postal Zip Code"
+              data-tooltip="5 Digit Postal Code"
               data-tooltip-position="right"
               >?</span
             >
@@ -76,13 +74,13 @@
             type="text"
             class="form-control"
             name="zipcode"
-            access="false"
-            maxlength="5"
-            minlength="5"
             id="zipcode"
             title="5 Digit Zip Code"
-            required="required"
+            maxlength="5"
+            minlength="5"
+            pattern="[0-9]{5}"
             aria-required="true"
+            required="required"
           />
         </div>
         <div id="passwordInput">
@@ -90,7 +88,7 @@
             >Password<span class="formbuilder-required">*</span
             ><span
               class="tooltip-element"
-              data-tooltip="Must Contain Upper (A-Z) &amp; Lower (a-z) Case Letters &amp; At Least One Number (0-9) "
+              data-tooltip="Must use upper/lower case letters with at least one number and one special character."
               data-tooltip-position="right"
               >?</span
             ></label
@@ -98,13 +96,12 @@
           <input
             type="password"
             class="form-control"
-            name="text-1653024840648"
-            access="false"
-            maxlength="20"
-            id="text-1653024840648"
             title="Must Contain Upper (A-Z) &amp; Lower (a-z) Case Letters &amp; At Least One Number (0-9) "
-            required="required"
+            id="pwd"
             aria-required="true"
+            required="required"
+            pattern="^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$"
+            minlength="10"
           />
         </div>
         <div id="confirmPassword">
@@ -121,19 +118,18 @@
             type="password"
             class="form-control"
             name="password"
-            access="false"
-            maxlength="20"
-            id="password"
-            title="Must Match First Input"
-            required="required"
+            id="confirmPwd"
+            title="Re-Type Password"
             aria-required="true"
+            required="required"
+            pattern="^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$"
+            minlength="10"
           />
         </div>
         <div id="buttonZone">
           <button
             type="submit"
             name="submit-btn"
-            access="false"
             id="submit-btn"
           >
             Submit
@@ -141,7 +137,6 @@
           <button
             type="button"
             name="cancel-btn"
-            access="false"
             id="cancel-btn"
           >
             Cancel
