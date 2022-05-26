@@ -14,32 +14,27 @@ const formInputs = document.querySelectorAll('input');
 submit.addEventListener('click', (event) => {
   event.preventDefault();
   if (form.checkValidity()) {
-    console.log('success');
-    formInputs.forEach((input) => {
-      input.value = '';
-    });
+    // eslint-disable-next-line no-alert
+    alert('High Five! Success');
+    form.reset();
   } else {
-    console.log('NOPE');
-    Array.from(formInputs);
-    const failedInput = form.map((input) => input.checkValidity());
-    console.log(failedInput[0]);
+    const badApples = document.querySelectorAll(':invalid');
+    badApples[1].focus();
   }
 });
 
 cancel.addEventListener('click', (event) => {
   event.preventDefault();
-  formInputs.forEach((input) => {
-    input.value = '';
-  });
+  form.reset();
   formInputs[0].focus();
 });
 
 // This next section could probably be a loop to set all the listeners and then..
 // Set the custom validity messages to an interpolation depending on what element needs the message.
 
-email.addEventListener('keyup', () => {
+email.addEventListener('input', () => {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity('I am expecting an e-mail address!');
+    email.setCustomValidity('Enter A Valid Email Address');
     email.reportValidity();
   } else {
     email.setCustomValidity('');
