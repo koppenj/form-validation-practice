@@ -29,9 +29,6 @@ cancel.addEventListener('click', (event) => {
   formInputs[0].focus();
 });
 
-// This next section could probably be a loop to set all the listeners and then..
-// Set the custom validity messages to an interpolation depending on what element needs the message.
-
 email.addEventListener('input', () => {
   if (email.validity.typeMismatch) {
     email.setCustomValidity('Enter A Valid Email Address');
